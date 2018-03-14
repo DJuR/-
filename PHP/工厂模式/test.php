@@ -1,8 +1,6 @@
 <?php
 require_once './ShapeFactory.php';
 
-$ShapeFactory = new ShapeFactory();
-
 $Square = $ShapeFactory::getShape('Square');
 $Square->draw();
 
