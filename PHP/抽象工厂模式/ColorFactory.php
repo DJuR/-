@@ -14,5 +14,7 @@ class ColorFactory extends AbstractFactory {
                 return new $className;
             }
         }
+
+        return null;
     }
 }

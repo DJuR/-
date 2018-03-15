@@ -10,15 +10,12 @@ class ShapeFactory extends AbstractFactory  {
 
         if(file_exists($dir = "./{$param}.php")) {
             require_once $dir;
-        } else {
-            return null;
-        }
-        
-        if(class_exists($param)) {
-            return new $param;
-        }
+            if(class_exists($param)) {
+                return new $param;
+            }
+        } 
 
-        return '';
+        return null;
     }
 
     function getColor($param)
